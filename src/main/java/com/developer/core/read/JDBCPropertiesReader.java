@@ -13,7 +13,7 @@ import java.util.Properties;
  * @author chendonglin
  * @since 1.0.0-SNAPSHOT
  */
-public class JDBCPropertiesReader extends AbstractPropertiesReader implements ClasspathSourceRead<Properties> {
+public class JDBCPropertiesReader extends AbstractPropertiesReader implements ClasspathSourceReader<Properties> {
 
     @Override
     public Properties read() {

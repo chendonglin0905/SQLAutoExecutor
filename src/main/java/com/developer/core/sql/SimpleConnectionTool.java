@@ -2,7 +2,7 @@ package com.developer.core.sql;
 
 import com.developer.core.ConstantKeys;
 import com.developer.core.CoreException;
-import com.developer.core.read.ClasspathSourceRead;
+import com.developer.core.read.ClasspathSourceReader;
 import com.developer.core.read.JDBCPropertiesReader;
 
 import java.sql.Connection;
@@ -20,7 +20,7 @@ import java.util.Properties;
  */
 public class SimpleConnectionTool implements ConnectionTool {
 
-    private ClasspathSourceRead<Properties> reader;
+    private ClasspathSourceReader<Properties> reader;
 
     public SimpleConnectionTool() {
         reader = new JDBCPropertiesReader();

@@ -8,7 +8,7 @@ package com.developer.core.read;
  * @author chendonglin
  * @since 1.0.0-SNAPSHOT
  */
-public interface ClasspathSourceRead<T> {
+public interface ClasspathSourceReader<T> {
 
     T read();
 }
