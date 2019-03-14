@@ -3,6 +3,7 @@ package com.developer.core.sql;
 import com.developer.core.CoreException;
 import com.developer.core.Executor;
 import com.developer.core.Scanner;
+import com.sun.deploy.util.OrderedHashSet;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -121,6 +122,7 @@ public class SQLAutoExecutor implements Executor, Scanner {
             // Rollback
             try {
                 connection.rollback();
+                throw new CoreException("SQL execute error");
             } catch (SQLException e1) {
                 throw new CoreException("Connection rollback failed");
             }
